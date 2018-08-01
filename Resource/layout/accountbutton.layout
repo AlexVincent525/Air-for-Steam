@@ -1,6 +1,17 @@
 resource/layout/accountbutton.layout {
-
+	controls {
+			account_avatar
+			{
+				"ControlName"	"Image"
+				"fieldName"		"account_avatar"
+				"zpos" 			"-2" // behind dropdown button
+				"style"			"AccountAvatarStyle"
+			}
+		}
 	styles {
+		AccountAvatarStyle {
+			corner_rounding=32
+		}
 		AccountPersonaStyleOffline {
 			//textcolor=none
 			//minimum-width=16
@@ -15,15 +26,15 @@ resource/layout/accountbutton.layout {
 
 		AccountButtonStyle {
 			render_bg {
-        0="image( x0 + 6, y0 + 6, x1, y1, graphics/onfocus/account )"
-      }
+				0="image( x0 + 6, y0 + 6, x1, y1, graphics/onfocus/account )"
+			}
 		}
 
 		AccountButtonStyle:hover {
 			render_bg {
-        0="image( x0, y0, x1, y1, graphics/onfocus/active_circle )"
-        1="image( x0 + 6, y0 + 6, x1, y1, graphics/onfocus/account )"
-      }
+		0="image( x0, y0, x1, y1, graphics/onfocus/active_circle )"
+		1="image( x0 + 6, y0 + 6, x1, y1, graphics/onfocus/account )"
+	  }
 		}
 
 		AccountBalanceStyle {
@@ -32,15 +43,14 @@ resource/layout/accountbutton.layout {
 		}
 
 		AccountMenuButtonStyle {
-			render_bg { }
+			render_bg {}
 		}
 	}
 
-	layout
-	{
+	layout {
 		place { control=account_menu_button height=max width=max } // span over everything
 		place { control=account_balance height=max width=max } //necessary to have here, otherwise the button has no width
-
-		place { control=account_persona,account_avatar,account_drop_down height=0 width=0 }
+		place { control=account_avatar margin=2 height=32 width=32 }
+		place { control=account_persona,account_drop_down height=0 width=0 }
 	}
 }
