@@ -14,6 +14,9 @@
 		AccountMenuStyle {
 			bgcolor=A2Menu
 		}
+		account_menu_label:hover {
+			textcolor="Friends.OnlineColor"
+		}
 	}
 
 	layout {
