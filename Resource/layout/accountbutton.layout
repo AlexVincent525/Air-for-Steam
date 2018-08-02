@@ -1,9 +1,6 @@
 resource/layout/accountbutton.layout {
 	styles {
-		AccountPersonaStyleOffline {
-			//textcolor=none
-			//minimum-width=16
-		}
+		AccountPersonaStyleOffline { }
 		AccountPersonaStyleOnline { }
 		AccountPersonaStyleInGame { }
 
@@ -11,19 +8,8 @@ resource/layout/accountbutton.layout {
 		AccountDropDownStyleOnline { }
 		AccountDropDownStyleInGame { }
 
-
-		AccountButtonStyle {
-			render_bg {
-				0="image( x0 + 6, y0 + 6, x1, y1, graphics/onfocus/account )"
-			}
-		}
-
-		AccountButtonStyle:hover {
-			render_bg {
-				0="image( x0, y0, x1, y1, graphics/onfocus/active_circle )"
-				1="image( x0 + 6, y0 + 6, x1, y1, graphics/onfocus/account )"
-			}
-		}
+		AccountButtonStyle { }
+		AccountButtonStyle:hover { }
 
 		AccountBalanceStyle {
 			textcolor=none
@@ -36,8 +22,8 @@ resource/layout/accountbutton.layout {
 	}
 
 	layout {
-		place { control=account_menu_button end-left=account_avatar height=max width=36 } // span over everything
-		place { control=account_avatar align=right margin=2 height=32 width=32 } //necessary to have here, otherwise the button has no width
+		place { control=account_menu_button end-left=account_avatar height=max width=max } // span over everything
+		place { control=account_avatar align=right height=36 width=36 } //necessary to have here, otherwise the button has no width
 
 		place { control=account_balance,account_persona,account_drop_down height=0 width=0 }
 	}
