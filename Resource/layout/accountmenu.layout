@@ -15,7 +15,7 @@ resource/layout/accountmenu.layout {
 			bgcolor=A2Menu
 		}
 		account_menu_label:hover {
-			textcolor="Friends.OnlineColor"
+			textcolor="Friends.OnlineColor" // Fixed hover text color.
 		}
 	}
 
