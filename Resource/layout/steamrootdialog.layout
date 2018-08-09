@@ -96,14 +96,13 @@ resource/layout/steamrootdialog.layout {
       place [!$OSX] { control=MenuBar align=top width=52 height=49 }
 
       place { control=ParentalLockButton region=header align=right height=30 width=30 align=right }
+
       place [!$OSX] { control=AccountButton region=header align=right y=7 height=41 width=36 margin-right=118 }
       place [$OSX] { control=AccountButton region=header align=right y=7 height=41 width=36 margin-right=20 }
       place { control=InboxButton region=header align=right y=7 height=50 width=36 margin-right=4 end-right=AccountButton }
+      place { control=UIStatusPanel region=header align=right y=7 height=50 width=36 margin-right=4 end-right=InboxButton }
 
     place { control=UINavigatorPanel width=max height=max }
-
-    region { name=downloads align=bottom height=80 width=max }
-      place { control=UIStatusPanel region=downloads align=right height=74 width=74 margin-right=23 }
 
     place { control=view_friends,online_friends,startvr,exitvr,SupportAlert,fullscreen,New,add_game,ImageLogo,BigPictureBG,FriendPanel,account_balance,account_balance_seperator,account_URL,universe_label height=0 width=0 margin-left=-9999 }
 
